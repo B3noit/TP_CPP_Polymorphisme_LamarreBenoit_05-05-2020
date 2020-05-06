@@ -17,7 +17,7 @@ void afficherInfos(const CFigure& f);
 
 int main() {
 	CTriangle triangle(5, 8); 
-	CCarre carre(5); 
+	CCarre carre(4); 
 	/*cout << endl; 
 	//cout << "Triangle :" << endl; 
 	cout << "Je suis un " << triangle.description() << endl; 
@@ -30,7 +30,7 @@ int main() {
 	afficherInfos(carre); // pas de souci : un carré est une figure */
 
 
-	CFigure* figure;
+	/*CFigure* figure;
 	list<CFigure*> liste;
 	list<CFigure*>::iterator iL;
 	cout << endl;
@@ -59,7 +59,7 @@ int main() {
 	}
 
 	cout << endl;
-	return 0;
+	return 0;*/
 
 }
 
@@ -67,7 +67,7 @@ int main() {
 //  une  fonction  qui  permet  d’afficher  la  description  d’une  Figure 
 void afficherInfos(const CFigure& f)
 {
-	cout << "Je suis un " << f.description() << endl;
-	cout << "Mes attributs sont : " << " " << f.toString() << endl;
+	/*cout << "Je suis un " << f.description() << endl;
+	cout << "Mes attributs sont : " << " " << f.toString() << endl;*/
 }
 

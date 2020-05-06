@@ -4,11 +4,6 @@
 using namespace std;
 
 
-std::string CFigure::description() const
-{
-	return std::string();
-}
-
 std::string CFigure::toString() const
 {
 	ostringstream oss; 
