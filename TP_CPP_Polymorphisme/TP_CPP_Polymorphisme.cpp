@@ -8,66 +8,69 @@ using namespace std;
 
 #include "CFigure.h"
 #include "Triangle.h"
-#include "Carre.h" 
-
-
-
-void afficherInfos(const CFigure& f);
+#include "Carre.h"
+#include "Rectangle.h"
+#include "Cercle.h"
+#include "Cube.h"
+#include "Parallelepipede.h"
+#include "Sphere.h"
 
 
 int main() {
+
+	cout << endl;
+
 	CTriangle triangle(5, 8); 
+	cout << "Je suis un " << triangle.description(true) << endl;
+	cout << triangle.description(false);
+	cout << "Perimetre = " << triangle.perimetre() << endl; 
+	cout << "Aire = " << triangle.aire() << endl; 
+	cout << "Volume = 0"<< endl << endl;
+
+
 	CCarre carre(4); 
-	/*cout << endl; 
-	//cout << "Triangle :" << endl; 
-	cout << "Je suis un " << triangle.description() << endl; 
-	cout << "Mes attributs sont : " << " " << triangle.toString() << endl; 
-	//cout << "Carre :" << endl;
-	cout << "Je suis un " << carre.description() << endl; 
-	cout << "Mes attributs sont : " << " " << carre.toString() << endl; cout << endl; return 0 ; 
-
-	afficherInfos(triangle); // pas de souci : un triangle est une figure 
-	afficherInfos(carre); // pas de souci : un carré est une figure */
+	cout << "Je suis un " << carre.description(true) << endl;
+	cout << carre.description(false); 
+	cout << "Périmetre = " << carre.perimetre() << endl;
+	cout << "Aire = " << carre.aire() << endl; 
+	cout << "Volume = 0" << endl << endl;
 
 
-	/*CFigure* figure;
-	list<CFigure*> liste;
-	list<CFigure*>::iterator iL;
-	cout << endl;
-	//cout << "Triangle :" << endl;
-	cout << "Je suis un " << triangle.description() << endl;
-	cout << "Mes attributs sont : " << " " << triangle.toString() << endl;
-	//cout << "Carre :" << endl;
-	cout << "Je suis un " << carre.description() << endl;
-	cout << "Mes attributs sont : " << " " << carre.toString() << endl;
-	cout << endl;
-	// Problème n°1 :
-	cout << "Problème n°1 :" << endl;
-	afficherInfos(triangle);
-	afficherInfos(carre);
-	cout << endl;
-	// Problème n°2 :
-	cout << "Problème n°2 :" << endl;
-	liste.push_back(&triangle);
-	liste.push_back(&carre);
+	CRectangle rectangle(5, 4);
+	cout << "Rectangle  :  " << endl;
+	cout << "Périmetre = " << rectangle.perimetre() << endl; 
+	cout << "Aire = " << rectangle.aire() << endl; 
+	cout << "Volume = 0" << endl << endl;
 
-	for (iL = liste.begin(); iL != liste.end(); iL++)
-	{
-		figure = *iL;
-		cout << "Je suis un " << figure->description() << endl;
-		cout << "Mes attributs sont : " << " " << figure->toString() << endl;
-	}
 
-	cout << endl;
-	return 0;*/
+	CCercle cercle(2);// rayon 
+	cout  <<  "Cercle  :  "  <<  endl; 
+	cout << "Périmetre = " << cercle.perimetre() << endl;
+	cout  <<  "Aire = " << cercle.aire() << endl; 
+	cout << "Volume = 0" << endl << endl; 
 
+
+	CCube cube(6); // largeur 
+	cout  <<  "Cube  :  "  <<  endl;
+	cout << "Périmetre = " << cube.perimetre() << endl; 
+	cout  <<  "Aire = " << cube.aire() << endl;
+	cout << "Volume = " << cube.volume() << endl << endl;
+
+
+	CParallelepipede  parallelepipede(5, 4, 9);  //  largeur,  longueur,  hauteur 
+	cout  <<  "Parallelepipede  :  "  <<  endl; 
+	cout << "Périmetre = " << parallelepipede.perimetre() << endl;
+	cout  <<  "Aire = " << parallelepipede.aire() << endl; 
+	cout << "Volume = " << parallelepipede.volume() << endl << endl;
+
+
+	CSphere sphere(3); // rayon 
+	cout  <<  "Sphere  :  "  <<  endl; 
+	cout << "Périmetre = " << sphere.perimetre() << endl; 
+	cout  <<  "Aire = " << sphere.aire() << endl; 
+	cout << "Volume = " << sphere.volume() << endl << endl; 
 }
 
 
-//  une  fonction  qui  permet  d’afficher  la  description  d’une  Figure 
-void afficherInfos(const CFigure& f)
-{
-	/*cout << "Je suis un " << f.description() << endl;
-	cout << "Mes attributs sont : " << " " << f.toString() << endl;*/
-}
+
 
