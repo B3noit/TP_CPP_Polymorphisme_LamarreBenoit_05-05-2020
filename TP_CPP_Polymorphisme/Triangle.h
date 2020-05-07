@@ -16,11 +16,15 @@ public:
 
 	~CTriangle() {} 
 
-	double perimetre() {
+	double perimetre() 
+	{
 		return sqrt(m_dblbase * m_dblbase + m_dblhauteur * m_dblhauteur) +m_dblbase + m_dblhauteur;
 	}
 
-	double aire() { return m_dblbase * m_dblhauteur / 2; }
+	double aire() 
+	{
+		return m_dblbase * m_dblhauteur / 2; 
+	}
 
 	string description(bool isShort) const; // redéfinition pour un Triangle
 	string toString() const; // redéfinition pour un Triangle 

@@ -3,10 +3,12 @@
 
 #include <sstream>	
 
+using namespace std;
+
 string CTriangle::description(bool isShort) const
 {
-	return "Bonjour je suis Triangolo le triangle trop rigolo."; // je suis plus précisément ...
-	std::string desc;
+	//return "Bonjour je suis Triangolo le triangle trop rigolo."; // je suis plus précisément ...
+	string desc;
 	if (isShort)
 	{
 		desc = "Triangle";

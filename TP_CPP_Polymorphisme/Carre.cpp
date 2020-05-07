@@ -7,7 +7,7 @@ using namespace std;
 
 string CCarre::description(bool isShort) const
 {
-	return "Je suis Carro le carré qui se tient à carreau";// je suis plus précisément ... 
+	//return "Je suis Carro le carré qui se tient à carreau";// je suis plus précisément ... 
 	std::string desc;
 	if (isShort)
 	{

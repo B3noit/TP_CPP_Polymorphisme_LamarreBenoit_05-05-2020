@@ -17,8 +17,8 @@ public:
 	~CRectangle() {}
 	double perimetre() { return   (m_dbllargeur + m_dbllongueur) * 2; }
 	double aire() { return m_dbllargeur * m_dbllongueur; }
-	string description(bool isShort) const; // redéfinition pour un Carre 
-	string toString() const; // redéfinition pour un Carre 
+	string description(bool isShort) const; // redéfinition pour un Rectangle 
+	string toString() const; // redéfinition pour un Rectangle
 
 };
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Carre.cpp" />
+    <ClCompile Include="Cercle.cpp" />
     <ClCompile Include="CFigure.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="TP_CPP_Polymorphisme.cpp" />
@@ -159,6 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Carre.h" />
+    <ClInclude Include="Cercle.h" />
     <ClInclude Include="CFigure.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Triangle.h" />
