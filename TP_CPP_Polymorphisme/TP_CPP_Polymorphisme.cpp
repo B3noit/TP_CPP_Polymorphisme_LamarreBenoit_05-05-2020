@@ -69,6 +69,96 @@ int main() {
 	cout << "Périmetre = " << sphere.perimetre() << endl; 
 	cout  <<  "Aire = " << sphere.aire() << endl; 
 	cout << "Volume = " << sphere.volume() << endl << endl; 
+
+
+
+
+	CFigure* fig; 
+	list<CFigure*> liste; 
+	list<CFigure*>::iterator iL;
+	fstream* fichier = NULL; string strFigure;
+
+	int n_x, n_y, n_z; 
+	double dbl_base, dbl_hauteur, dbl_largeur, dbl_longueur, dbl_rayon, dx, dy ;
+
+	liste.push_back(&triangle);
+	liste.push_back(&carre); 
+	liste.push_back(&rectangle); 
+	liste.push_back(&cercle); 
+	liste.push_back(&cube); 
+	liste.push_back(&parallelepipede); 
+	liste.push_back(&sphere);
+
+
+
+	fichier = new fstream("Figures.txt", fstream::out);
+	for (iL = liste.begin();iL != liste.end(); iL++) 
+	{ 
+		fig = *iL; 
+		*fichier << fig->description(true) << " " << fig->toString() << endl;
+	} 
+	fichier->close(); 
+	delete fichier;
+	
+
+	fichier = new fstream("Figures.txt", fstream::in);
+
+	*fichier >> strFigure;
+	while (!fichier->eof())
+	{
+		*fichier >> n_x >> n_y >> n_z; 
+		cout << strFigure; 
+		cout << " " << n_x << " " << n_y << " " << n_z;
+
+		if (strFigure == "Figure") cout << endl;
+
+		if (strFigure == "Triangle") 
+		{ 
+			*fichier >> dbl_base >> dbl_hauteur; 
+			cout << " " << dbl_base << " " << dbl_hauteur << endl; 
+		}
+
+		if (strFigure == "Carré") 
+		{ 
+			*fichier >> dbl_largeur; 
+			cout << " " << dbl_largeur << endl; 
+		}
+
+		if (strFigure == "Rectangle") 
+		{ 
+			*fichier >> dbl_largeur >> dbl_longueur; 
+			cout << dbl_largeur << dbl_longueur << endl; 
+		}
+
+		if (strFigure == "Cercle") 
+		{
+			*fichier >> dbl_rayon; 
+			cout << dbl_rayon << endl; 
+		}
+
+		if (strFigure == "Cube") 
+		{ 
+			*fichier >> dbl_largeur; 
+			cout << dbl_largeur << endl; 
+		}
+
+		if (strFigure == "Parallélépipède") 
+		{
+			*fichier >> dbl_largeur >> dbl_longueur >> dbl_hauteur >> dx >> dy;
+			cout << dbl_largeur << dbl_longueur << dbl_hauteur << dx << dy << endl;
+		}
+
+		if (strFigure == "Sphère")
+		{ 
+			*fichier >> dbl_rayon; 
+			cout << dbl_rayon << endl; 
+		}
+		while (fichier->get() != '\n'); 
+		*fichier >> strFigure;
+	}
+	fichier->close(); 
+	delete fichier;
+	return 0;
 }
 
 
