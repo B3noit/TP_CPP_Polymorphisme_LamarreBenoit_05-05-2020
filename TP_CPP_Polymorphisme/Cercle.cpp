@@ -40,6 +40,6 @@ string CCercle::description(bool isShort) const
 string CCercle::toString() const
 {
 	ostringstream oss;
-	oss << m_dblrayon;  //  moi,  j’ai  une  largeur  en  plus  des  attributs  d’une  Figure 
+	oss << m_dblrayon;  //  moi,  j’ai  un rayon  en  plus  des  attributs  d’une  Figure 
 	return CFigure::toString() + " " + oss.str();
 }
