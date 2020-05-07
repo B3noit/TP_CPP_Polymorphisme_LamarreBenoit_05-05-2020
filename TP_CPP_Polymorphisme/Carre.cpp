@@ -11,7 +11,7 @@ string CCarre::description(bool isShort) const
 	std::string desc;
 	if (isShort)
 	{
-		desc = "Triangle";
+		desc = "Carre";
 	}
 	else if (!isShort)
 	{

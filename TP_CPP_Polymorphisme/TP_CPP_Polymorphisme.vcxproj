@@ -153,12 +153,14 @@
   <ItemGroup>
     <ClCompile Include="Carre.cpp" />
     <ClCompile Include="CFigure.cpp" />
+    <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="TP_CPP_Polymorphisme.cpp" />
     <ClCompile Include="Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Carre.h" />
     <ClInclude Include="CFigure.h" />
+    <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Triangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
