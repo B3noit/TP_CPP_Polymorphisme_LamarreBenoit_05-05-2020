@@ -155,6 +155,7 @@
     <ClCompile Include="Cercle.cpp" />
     <ClCompile Include="CFigure.cpp" />
     <ClCompile Include="Cube.cpp" />
+    <ClCompile Include="Parallelepipede.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="TP_CPP_Polymorphisme.cpp" />
     <ClCompile Include="Triangle.cpp" />
@@ -164,6 +165,7 @@
     <ClInclude Include="Cercle.h" />
     <ClInclude Include="CFigure.h" />
     <ClInclude Include="Cube.h" />
+    <ClInclude Include="Parallelepipede.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Triangle.h" />
   </ItemGroup>
